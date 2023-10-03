@@ -42,14 +42,14 @@ const TodoItem: React.FC<TodoItemType> = (props) => {
   return (
     <li className="todo-item">
       {isEdit === false ? (
-        <div onDoubleClick={() => setIsEdit(true)}>
-          <span>{text}</span>
-          <span className="date-text">
+        <div onDoubleClick={() => setIsEdit(true)} className='textBtn'>
+          <span className='textBtn'>{text}</span>
+          <span className='textBtn'>
             {new Date(timestamp?.toDate()).toLocaleString()}
           </span>
         </div>
       ) : (
-        <div>
+        <div className='textBtn'>
           <form onSubmit={onSubmitUpdate}>
             <input
               type="text"

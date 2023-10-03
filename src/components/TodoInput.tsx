@@ -18,12 +18,13 @@ const TodoInput:React.FC = () => {
   };
 
   return (
-    <form onSubmit = {onSubmitAdd} style = {{display:'inline'}}>
+    <form onSubmit = {onSubmitAdd} style = {{display:'inline'}} className='form'>
       <input 
       onChange={(e) => setInputText(e.target.value)} 
       value = {inputText}
+      className = "inputbutton"
       title='追加ボタン'/>
-      <button>追加</button>
+      <button className='addBtn'>追加</button>
     </form>
   );
 };
